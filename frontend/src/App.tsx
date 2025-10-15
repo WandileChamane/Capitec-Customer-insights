@@ -60,7 +60,7 @@ export default function App(){
             <h3 className="font-semibold mb-2">Spending Goals</h3>
             <p className="text-sm text-gray-600">Manage monthly budgets and receive alerts when near limit.</p>
             <br/>
-            <button className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:text-gray dark:hover:bg-gray-700">Get Started</button>
+            <button className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-200 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:text-gray dark:hover:bg-gray-700">Get Started</button>
           </div>
           <div className="card p-4">
             <h3 className="font-semibold mb-2">Top Categories</h3>

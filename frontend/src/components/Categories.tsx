@@ -23,26 +23,27 @@ const COLORS = [
 
 const TopCategoriesPieChart: React.FC<TopCategoriesPieChartProps> = ({ topCategories }) => {
   return (
-    <ResponsiveContainer width="100%" height={400}>
-      <PieChart>
-        <Pie
-          data={topCategories}
-          dataKey="total"
-          nameKey="name"
-          cx="50%"
-          cy="50%"
-          outerRadius={120}
-          fill="#8884d8"
-          label={(entry) => entry.name} // show category name on chart
-        >
-          {topCategories.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
-        <Tooltip formatter={(value: number) => value.toLocaleString()} />
-        <Legend />
-      </PieChart>
-    </ResponsiveContainer>
+    <ResponsiveContainer width="100%" height={400} data-testid="piechart-svg">
+        <PieChart>
+            <Pie
+            data={topCategories.length ? topCategories : [{ name: '', total: 0 }]}
+            dataKey="total"
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            outerRadius={120}
+            fill="#8884d8"
+            label={(entry) => entry.name}
+            >
+            {(topCategories.length ? topCategories : [{ name: '', total: 0 }]).map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+            </Pie>
+            <Tooltip formatter={(value: number) => value.toLocaleString()} />
+            <Legend />
+        </PieChart>
+</ResponsiveContainer>
+
   );
 };
 

@@ -2,16 +2,20 @@ import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-const fetchTx = async (limit=20, offset=0) => {
+const fetchTx = async (limit = 20, offset = 0) => {
   const res = await axios.get(`/api/customers/cust_001/transactions?limit=${limit}&offset=${offset}`);
-  return res.data;
+  const payload = res?.data || {};
+  return {
+    total: payload.total ?? payload.data?.length ?? payload.length ?? 0,
+    data: payload.data ?? payload.transactions ?? payload ?? [],
+  };
 };
 
 export default function Transactions(){
   const [page, setPage] = useState(0);
   const { data, isLoading } = useQuery(['tx', page], ()=> fetchTx(20, page*20));
   if (isLoading) return <div className="card p-4">Loading transactions...</div>;
-  const { total, data: rows } = data;
+  const { total, data: rows } = data ? data : { total: 0, data: [] };
   return (
     <div className="card p-4">
       <h2 className="text-lg font-semibold mb-3">Transactions</h2>
