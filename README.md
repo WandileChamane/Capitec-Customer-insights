@@ -5,10 +5,13 @@ This bundle includes:
 - frontend/: Vite + React + TypeScript app (port 3000)
 
 Development:
-1. Install dependencies for backend and frontend (or use docker-compose)
-2. To run quickly with Docker Compose:
+1. Install dependencies for backend and frontend
+2. Navigate into the backend folder and run `npm run seed`, this step is important to generate mock data.
+3. To start the API run `npm run start` inside your terminal inside the backend folder.
+4. To start the Frontend run `npm run dev` inside your terminal inside the fronend folder.
+5. Optionally to run quickly with Docker Compose:
    docker compose up --build
-3. Frontend proxies /api to the backend in dev.
+6. Frontend proxies /api to the backend in dev.
 
 Theme: approximate Capitec bank palette (brand red + gold accents).
 
