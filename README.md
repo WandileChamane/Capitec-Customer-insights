@@ -15,6 +15,10 @@ Development:
    docker compose up --build
 6. Frontend proxies /api to the backend in dev.
 
+Testing:
+1. Navigate into the root of the backend folder and run `npm test`
+2. Navigate into the root of the frontend folder and run `npm test`,
+
 Theme: approximate Capitec bank palette (brand red + gold accents).
 
 Notes:
