@@ -22,7 +22,7 @@ Testing:
 1. Navigate into the root of the backend folder and run `npm test`
 2. Navigate into the root of the frontend folder and run `npm test`,
 
-Theme: approximate Capitec bank palette (brand red + gold accents).
+Theme: approximate Capitec bank palette (brand red + blue accents).
 
 Notes:
 - Run `npm run seed` inside backend to generate seed-data.json if you want deterministic data.
