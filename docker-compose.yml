@@ -1,0 +1,26 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules     # <— prevent overwriting node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - ROLLUP_SKIP_NODEJS_NATIVE=1
+    command: npm run dev
+    working_dir: /app
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    ports:
+      - "4000:4000"
+    command: npm run dev
+    working_dir: /app

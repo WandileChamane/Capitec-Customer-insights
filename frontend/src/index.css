@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --brand-red: #FF0044;
+  --brand-deep: #C30039;
+  --brand-gold: #FFD200;
+  --bg: #fff7f8;
+}
+
+body {
+  background: linear-gradient(180deg, #fff7f8 0%, #fff 100%);
+}
+.header-brand {
+  background: linear-gradient(90deg,var(--brand-red),var(--brand-gold));
+}
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
