@@ -43,8 +43,8 @@ export default function App(){
       <header className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12"><img src={logo} alt='Capitec'/></div>
-          <h1 className="text-2xl font-bold">Capitec</h1> |
-          <h1 className="text-2xl font-normal text-gray-600">Customer Spending Insights</h1>
+          <h1 className="sm:text-sm font-bold">Capitec</h1> |
+          <h1 className="md:text-base text-gray-600">Customer Spending Insights</h1>
         </div>
         <div className="text-sm text-gray-600">Customer: Wandile Chamane</div>
       </header>
