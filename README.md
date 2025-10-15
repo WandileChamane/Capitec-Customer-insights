@@ -1,6 +1,6 @@
 # 💳 Customer Spending Insights - Full-stack (Mock)
 
-![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg](https://github.com/WandileChamane/Capitec-Customer-insights/blob/main/frontend/src/images/overview.png?raw=true))
+![alt text](https://github.com/WandileChamane/Capitec-Customer-insights/blob/main/frontend/src/images/overview.png?raw=true)
 https://github.com/WandileChamane/Capitec-Customer-insights/blob/main/frontend/src/images/overview.png
 
 A Capitec-themed full-stack project showcasing modern financial analytics UI and service design.
